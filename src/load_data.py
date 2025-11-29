@@ -36,6 +36,7 @@ def load_training_images_and_masks(training_image_files, training_mask_files):
         training_masks.append(mask)
 
     print(f"Training: Loaded {len(training_images)} images and {len(training_masks)} masks")
+    return training_images, training_masks
 
 def load_test_images_and_masks(test_image_files, test_mask_files):
     # Lists to store SimpleITK images
@@ -56,9 +57,10 @@ def load_test_images_and_masks(test_image_files, test_mask_files):
         test_masks.append(mask)
 
     print(f"Test: Loaded {len(test_images)} images and {len(test_masks)} masks")
+    return test_images, test_masks
 
-load_training_images_and_masks(training_image_files=training_image_files,
+training_images, training_masks = load_training_images_and_masks(training_image_files=training_image_files,
                                training_mask_files=training_mask_files)
 
-load_test_images_and_masks(test_image_files=test_image_files,
+test_images, test_masks = load_test_images_and_masks(test_image_files=test_image_files,
                            test_mask_files=test_mask_files)
