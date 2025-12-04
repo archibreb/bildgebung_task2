@@ -20,3 +20,13 @@ optimizer and its params
 - define registration method which loops over all input images
 - save fixed, moving and overlay for all input images
 - understand task: why training and test sets?
+
+# Questions
+- register per slice or per image? 208 per nifti object or just 1?
+- if and how to use landmarks?
+- how to use keypoints?
+- mesh size: 4-6?
+- optimizer: LBFGS (Limited memory Broyden Fletcher Goldfarb Shannon minimization) or Gradient Descent?
+- interpolator: linear or b-spline?
+- similarity metric: mattes?
+
